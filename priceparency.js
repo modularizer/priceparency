@@ -11,6 +11,7 @@ function makeImgOverlay(){
     div.style.padding = '5px 10px';
     div.style.fontSize = '14px';
     div.style.borderRadius = '5px';
+    return div;
 }
 
 function fillImgOverlay(prices, servings, items){
