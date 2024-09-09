@@ -99,8 +99,6 @@ function showRecipePrice(a){
             div.innerHTML = d.outerHTML;
         });
         span.appendChild(div);
-    }else{
-        console.warn('not a valid link', a.href);
     }
 }
 
