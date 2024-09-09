@@ -37,7 +37,7 @@ function fillImgOverlay(prices, servings, items){
 //___________________________________________________ FETCH ___________________________________________________________
 
 function parseRecipe(d){
-    let u = `${site}meal-plans-recipes/shop/${d}`;
+    let u = `${site}/meal-plans-recipes/shop/${d}`;
     return fetch(u).then(r => r.text()).then(t => {
         t = t.split('<script id="__NEXT_DATA__" type="application/json">')[1].split('</script>')[0];
         let r = JSON.parse(t);
