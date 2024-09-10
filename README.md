@@ -1,7 +1,25 @@
 # Priceparency
-Pavilions Price Transparency Project
+Grocery Price Transparency Project
 
-Goal is to show the price of Pavilions recipes in a browsable way.
+Goal is to show the price of [Albertsons Companies](https://www.albertsonscompanies.com/) recipes in a browsable way.
+
+# What stores are supported?
+* https://www.acmemarkets.com/recipes
+* https://www.albertsons.com/recipes
+* https://www.andronicos.com/recipes
+* https://www.bakersplus.com/recipes
+* https://www.carrsqc.com/recipes
+* https://www.haggen.com/recipes
+* https://www.jewelosco.com/recipes
+* https://www.kingsfoodmarkets.com/recipes
+* https://www.pavilions.com/recipes
+* https://www.randalls.com/recipes
+* https://www.safeway.com/recipes
+* https://www.shaws.com/recipes
+* https://www.smithsfoodanddrug.com/recipes
+* https://www.starmarket.com/recipes
+* https://www.tomthumb.com/recipes
+* https://www.vons.com/recipes
 
 ## Quickstart
 1. Clone the repo
@@ -9,7 +27,7 @@ Goal is to show the price of Pavilions recipes in a browsable way.
 3. Navigate to [pavilions.com/recipes](https://www.pavilions.com/recipes)
 
 ## What does it do?
-Pavilions has recipes which are useful for shopping and you can click and add them to cart, but some features are suboptimal:
+Albertsons/Safeway/Vons/Pavilions/etc has recipes which are useful for shopping and you can click and add them to cart, but some features are suboptimal:
 1. You have to click on each recipe to see the price
 2. You can't sort or filter by price
 3. You can't sort or filter by nutritional info, pans used, etc.

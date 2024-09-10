@@ -1,4 +1,4 @@
-let site = 'https://www.pavilions.com';
+let site = location.origin;
 
 //___________________________________________________ STYLES ___________________________________________________________
 function makeImgOverlay(){
@@ -107,5 +107,26 @@ function showAllRecipePrices(){
     document.querySelectorAll('a').forEach(a => showRecipePrice(a));
 }
 
-showAllRecipePrices();
+function hideExtra(){
+    let main = document.body.children[1].children[1];
 
+    // hide diet banner
+    let dietBanner = main.children[0];
+    dietBanner.style.display = 'none';
+
+    let header = Array.from(document.body.querySelectorAll('.unified-header'))[1];
+    let topBar = header.querySelector('.menu-nav');
+    let reserveNav = header.querySelector('.reserve-nav');
+
+    reserveNav.style.display = 'none';
+}
+
+//___________________________________________________ MAIN ___________________________________________________________
+function main(){
+    showAllRecipePrices();
+    if (location.href.startsWith(`${site}/recipes/diet/`)){
+        hideExtra();
+    }
+}
+//___________________________________________________ RUN ___________________________________________________________
+main();
