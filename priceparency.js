@@ -42,7 +42,11 @@ function parseRecipe(d){
         t = t.split('<script id="__NEXT_DATA__" type="application/json">')[1].split('</script>')[0];
         let r = JSON.parse(t);
         let p = r.props.pageProps;
+        if (!p.recipe){
+            return {};
+        }
         let servings = p.recipe.yield.servings;
+        let title = p.recipe.name;
         let items = {
             'main': [],
             'staples': [],
@@ -75,14 +79,16 @@ function parseRecipe(d){
             prices.all += x.totalPrice;
         });
 
-        return {prices, servings, items, r};
+        return {prices, servings, items, title, r};
     });
 }
 
 //___________________________________________________ MAIN ___________________________________________________________
-function calcPrice(d){
+function calcPrice(d, div,){
     return parseRecipe(d).then(d => {
-        return fillImgOverlay(d.prices, d.servings, d.items);
+        let el = fillImgOverlay(d.prices, d.servings, d.items);
+        div.innerHTML = el.outerHTML;
+        return d;
     });
 }
 
@@ -95,9 +101,7 @@ function showRecipePrice(a){
         }
         let div = makeImgOverlay();
         div.innerText = '' + d;
-        calcPrice(d).then(d => {
-            div.innerHTML = d.outerHTML;
-        });
+        calcPrice(d, div);
         span.appendChild(div);
     }
 }
