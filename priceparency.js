@@ -94,7 +94,7 @@ function calcPrice(d, div,){
 
 function showRecipePrice(a){
     if (a.href.startsWith(`${site}/meal-plans-recipes/shop/`)){
-        let d = a.href.split('/').pop().split('?')[0] * 1;
+        let d = a.href.split('/').pop().split('?')[0];
         let span = a.children[0];
         if (!span){
             return;
