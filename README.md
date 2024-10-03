@@ -65,16 +65,22 @@ This can be done by:
 
 #### Option 1 - Clone + Load Unpacked (for developers with git installed)
 1. Clone the repository 
-```bash
-git clone git@github.com:modularizer/priceparency.git
-```
-2. Open Chrome and navigate to `chrome://extensions/`
+    ```bash
+    git clone git@github.com:modularizer/priceparency.git
+    ```
+2. Open Chrome and navigate to
+    ```bash
+    chrome://extensions/
+    ```
 3. Click `Load unpacked` and select the `priceparency` directory
 
 #### Option 2 - Download + Load Unpacked
 1. Download the repository as a zip file (click the green `Code` button and select `Download ZIP`)
 2. Unzip the file
-3. Open Chrome and navigate to `chrome://extensions/`
+3. Open Chrome and navigate to
+    ```bash
+    chrome://extensions/
+    ```
 4. Click `Load unpacked` and select the `priceparency` directory
 
 <hr/>
@@ -84,9 +90,9 @@ git clone git@github.com:modularizer/priceparency.git
 1. Navigate to Bookmarks Manager `Ctrl+Shift+O`
 2. Click options menu on top right of screen and select "Add New Bookmark"
 3. Add bookwark with the url as:
-```
-javascript:fetch('https://raw.githubusercontent.com/modularizer/priceparency/master/priceparency.js').then(r=>r.text()).then(t=>eval(t))
-```
+    ```js
+    javascript:fetch('https://raw.githubusercontent.com/modularizer/priceparency/master/priceparency.js').then(r=>r.text()).then(t=>eval(t))
+    ```
 
 #### 2. Use - [pavilions.com/recipes](pavilions.com/recipes) -> Click Bookmark
 1. Go to [https://www.pavilions.com/recipes](https://www.pavilions.com/recipes) or one of the subcategory recipe pages, e.g. [https://www.pavilions.com/recipes/diet/flexitarian](https://www.pavilions.com/recipes/diet/flexitarian)
